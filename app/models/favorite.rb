@@ -1,4 +1,4 @@
 class Favorite < ApplicationRecord
-  beloges_to :user
-  beloges_to :topic
+  belongs_to :user
+  belongs_to :topic
 end
