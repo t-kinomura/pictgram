@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://tech-boost.jp/common/books/22#%E8%AA%B2%E9%A1%8C -->
+<html lang="ja" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!-- Anti-Flicker Snippet -->
+<style>.async-hide { opacity: 0 !important} </style>
+<script async="" src="./tech boost_files/saved_resource"></script><script type="text/javascript" async="" src="./tech boost_files/analytics.js"></script><script type="text/javascript" async="" src="./tech boost_files/js"></script><script async="" src="./tech boost_files/saved_resource(1)"></script><script async="" src="./tech boost_files/uwt.js"></script><script src="./tech boost_files/inferredEvents.js" async=""></script><script src="./tech boost_files/359436954244890" async=""></script><script async="" src="./tech boost_files/fbevents.js"></script><script type="text/javascript" async="" src="./tech boost_files/f.txt"></script><script type="text/javascript" async="" src="./tech boost_files/analytics.js"></script><script async="" src="./tech boost_files/gtm.js"></script><script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-5TQGT5L':true});
+</script>
+<!-- End Anti-Flicker Snippet -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5TQGT5L');</script>
+<!-- End Google Tag Manager -->
+<meta content="IE=edge" http-equiv="X-UA-Compatible"><meta content="width=device-width, initial-scale=1" name="viewport"><title>tech boost</title><meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="Myx3co9Pd/XyRljmG3pVi1YVjm0h9pi9QfcB+Hcrf6+tXuJrGEV8cNcmH04tRi7Op9yM5+c4UYGo2/psSRSMKg=="><link rel="shortcut icon" type="image/x-icon" href="https://tech-boost.jp/assets/favicon-a1484446ccb9dccafcf4a036951749501805cc76eee01e63271fb89375405d56.ico"><link rel="stylesheet" media="screen" href="./tech boost_files/application-a2edd266662105417efeaeddc1d08edd4fa89ca41e5bd5dda3cde9290d2b07c8.css"><script src="./tech boost_files/application-b9ac8f158fe9c8c4de606a20f5116c96001e4ea961e8b79aa1d39918c4d2d5fc.js"></script><style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style><script src="./tech boost_files/f(1).txt"></script></head><body><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TQGT5L"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<nav class="navbar navbar-inverse navbar-fixed-top"><div class="container"><div class="navbar-header"><button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="https://tech-boost.jp/students"><img class="logo" src="./tech boost_files/logo-eab2cd88b463f9fae2c73de6d534e26d32e1e9df1fa045c0798db4dab42c2baa.png" alt="Logo"></a></div><div class="collapse navbar-collapse" id="navbar"><ul class="nav navbar-nav navbar-left"><li><a href="https://tech-boost.jp/students/users">マイページ</a></li><li><a href="https://tech-boost.jp/students/courses">受講中コース</a></li><li><a href="https://tech-boost.jp/students/questions">質問一覧</a></li><li><a href="https://tech-boost.jp/students/assignments">課題一覧</a></li><li><a href="https://tech-boost.jp/students/reports">メンタリング</a></li><li><a href="https://tech-boost.jp/students/questions/generals">お問い合わせ</a></li></ul><ul class="nav navbar-nav navbar-right"><li class="study-timer"><a class="btn btn-danger" id="btn-study-timer"><i class="fa fa-stop" id="btn-study-timer-icon"></i></a><div class="study-timer-text"><div><small id="study-timer-text-message">記録中</small></div><div><small id="study-timer-text-counter">05:15:45</small></div></div></li><li><a rel="nofollow" data-method="post" href="https://tech-boost.jp/logout">ログアウト</a></li></ul></div></div></nav><div class="main"><div class="container"><div class="book-detail"><div class="enlargement-image"></div><h1>Rails08 いいね機能の作成</h1><div class="row"><div class="col-md-9"><div class="card"><div class="content"><div class="book-markdown"><div class="markdown-contents"><span id="この章のゴール" class="fragment"></span><h2>この章のゴール</h2>
+
+<p><strong>いいね機能を完成させること</strong></p>
+
+<span id="はじめに" class="fragment"></span><h2>はじめに</h2>
+
+<p>いいね機能はSNSでよく見かける機能ですね。</p>
+
+<p>ボタンを押して「いいね」するだけなので、ぱっと見は簡単でシンプルな機能に思えます。</p>
+
+<p>実は意外と複雑で初めて作る場合は困惑することが多いです。</p>
+
+<p>なぜなら、いいね機能の実現には2つのテーブルからそれぞれ参照されるからです。</p>
+
+<p>ユーザーは複数のTopicに対して「いいね」ができます。</p>
+
+<p>またTopicは複数のユーザーから「いいね」ができます。</p>
+
+<p>そのため、UserテーブルとTopicテーブルの主キーをそれぞれ外部キーとして保存しないといけません。</p>
+
+<p>そうしないと、「誰が」「どのトピックに」対していいねしたかが特定できないからです。</p>
+
+<span id="favoriteモデルの作成" class="fragment"></span><h2>favoriteモデルの作成</h2>
+
+<p>はじめに、いいね機能のためのfavoriteモデルを作成します。</p>
+
+<p>favoriteモデルは以下のように指定します。</p>
+
+<span id=" 名前 型" class="fragment"></span><h2> 名前 型</h2>
+
+<p>user_id  | integer |<br>
+topic_id | integer |</p>
+
+<p>以下のコマンドを実行してfavoriteモデルを作成しましょう。</p>
+
+<pre><code class="hljs bash">$ rails g model favorite user_id:<span class="hljs-built_in">integer</span> topic_id:<span class="hljs-built_in">integer</span>
+$ rails db:migrate
+</code></pre>
+
+<p>次にモデルの関連付けを行いましょう。</p>
+
+<p>Userから見て、Favoriteモデルは複数存在します。</p>
+
+<p>つまり</p>
+
+<ul>
+<li>Userは複数のFavoriteを持っている</li>
+<li>Favoriteは一つのUserを持っている</li>
+</ul>
+
+<p>という二つの関連を持っています。</p>
+
+<p>そのためUserモデルに「has_many」を、Favoriteモデルに「belongs_to」を追加します。</p>
+
+<p><strong>app/models/user.rb</strong></p>
+
+<pre><code class="ruby hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span> &lt; ApplicationRecord</span>
+ ...
+ ...
+  has_many <span class="hljs-symbol">:topics</span>
+  has_many <span class="hljs-symbol">:favorites</span>
+<span class="hljs-keyword">end</span>
+
+</code></pre>
+
+<p><strong>app/models/favorite.rb</strong></p>
+
+<pre><code class="ruby hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Favorite</span> &lt; ApplicationRecord</span>
+  belongs_to <span class="hljs-symbol">:user</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+
+<p>また、Topicから見てもFavoriteモデルは複数存在しています。</p>
+
+<p>そのためTopicに「has_many」を、Favoriteに「belongs_to」を追加します。</p>
+
+<p><strong><em>app/models/topic.rb</em></strong></p>
+
+<pre><code class="ruby hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Topic</span> &lt; ApplicationRecord</span>
+ ...
+ ...
+  mount_uploader <span class="hljs-symbol">:image</span>, ImageUploader
+
+  has_many <span class="hljs-symbol">:favorites</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+
+<p><strong>app/models/favorite.rb</strong></p>
+
+<pre><code class="ruby hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Favorite</span> &lt; ApplicationRecord</span>
+  belongs_to <span class="hljs-symbol">:user</span>
+  belongs_to <span class="hljs-symbol">:topic</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+
+<p>これでモデルの関連づけは完了です。</p>
+
+<span id="コントローラ、ルーターの作成" class="fragment"></span><h2>コントローラ、ルーターの作成</h2>
+
+<p>次にいいねを作成するためのコントローラとルーティングを定義していきましょう。</p>
+
+<pre><code class="hljs ruby">$ rails g controller favorites
+</code></pre>
+
+<p><strong>config/routes.rb</strong></p>
+
+<pre><code class="ruby hljs">Rails.application.routes.draw <span class="hljs-keyword">do</span>
+ ...
+ ...
+  resources <span class="hljs-symbol">:users</span>
+  resources <span class="hljs-symbol">:topics</span>
+
+  get <span class="hljs-string">'favorites/index'</span>
+  post <span class="hljs-string">'/favorites'</span>, <span class="hljs-symbol">to:</span> <span class="hljs-string">'favorites#create'</span>
+
+<span class="hljs-keyword">end</span>
+
+</code></pre>
+
+<p><strong>app/controllers/favorites_controller.rb</strong></p>
+
+<pre><code class="ruby hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FavoritesController</span> &lt; ApplicationController</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">index</span></span>
+    @favorite_topics = current_user.favorite_topics
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">create</span></span>
+    favorite = Favorite.new
+    favorite.user_id = current_user.id
+    favorite.topic_id = params[<span class="hljs-symbol">:topic_id</span>]
+
+    <span class="hljs-keyword">if</span> favorite.save
+      redirect_to topics_path, <span class="hljs-symbol">success:</span> <span class="hljs-string">'お気に入りに登録しました'</span>
+    <span class="hljs-keyword">else</span>
+      redirect_to topics_path, <span class="hljs-symbol">danger:</span> <span class="hljs-string">'お気に入りに登録に失敗しました'</span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+
+</code></pre>
+
+<p>処理の内容を順を追って見ていきましょう。</p>
+
+<ol>
+<li>Favoriteクラスのインスタンスfavoriteを生成する。</li>
+<li>favorite.user_idに現在ログインしているuser(current_user)のidを保存する</li>
+<li>favorite.topic_idにparams[:topic_id]（後述）を保存する</li>
+<li>favoriteをsaveし、その成否によって条件分岐する</li>
+</ol>
+
+<p>以上のような処理でそれぞれのUserとTopicに紐付いたお気に入りの追加を行っています。</p>
+
+<span id="リンクの追加" class="fragment"></span><h3>リンクの追加</h3>
+
+<p>次に、いいねするためのリンクを作成します。</p>
+
+<p>投稿一覧画面のハートマークに、リンクを設定しましょう。</p>
+
+<p><strong>app/views/topics/index.html.erb</strong></p>
+
+<pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">image_tag</span> '<span class="hljs-attr">icons</span>/<span class="hljs-attr">heart-black.png</span>', <span class="hljs-attr">class:</span> '<span class="hljs-attr">topic-index-icon</span>' %&gt;</span>
+</code></pre>
+
+<p>この部分を以下のように変えます。</p>
+
+<pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">link_to</span> <span class="hljs-attr">favorites_path</span>(<span class="hljs-attr">topic_id:</span> <span class="hljs-attr">topic.id</span>), <span class="hljs-attr">method:</span> <span class="hljs-attr">:post</span> <span class="hljs-attr">do</span> %&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">image_tag</span> '<span class="hljs-attr">icons</span>/<span class="hljs-attr">heart-black.png</span>', <span class="hljs-attr">class:</span> '<span class="hljs-attr">topic-index-icon</span>' %&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">%</span> <span class="hljs-attr">end</span> %&gt;</span>
+</code></pre>
+
+<p>このlink_toの書き方は、初めて出てきました。</p>
+
+<pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">link_to</span> <span class="hljs-attr">favorites_path</span>(<span class="hljs-attr">topic_id:</span> <span class="hljs-attr">topic.id</span>) %&gt;</span>
+</code></pre>
+
+<p>のように、pathの引数にシンボルを与えることで、link_toにパラメーターを渡すことができます。</p>
+
+<p>上記の書き方だと、params[:topic_id]にtopic.idが入ります。</p>
+
+<p>ナビゲーションバーにあるハートマークのリンクをいいね一覧へ遷移するように修正しましょう。</p>
+
+<p><strong>app/views/layouts/application.html.erb</strong></p>
+
+<pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">link_to</span> '#' <span class="hljs-attr">do</span> %&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">image_tag</span> '<span class="hljs-attr">icons</span>/<span class="hljs-attr">heart.png</span>' %&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">%</span> <span class="hljs-attr">end</span> %&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+</code></pre>
+
+<p>↓</p>
+
+<pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">link_to</span> <span class="hljs-attr">favorites_index_path</span> <span class="hljs-attr">do</span> %&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">image_tag</span> '<span class="hljs-attr">icons</span>/<span class="hljs-attr">heart.png</span>' %&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">%</span> <span class="hljs-attr">end</span> %&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+</code></pre>
+
+<p>これでナビゲーションバーから「いいね一覧ページ」へ遷移するようになりました。</p>
+
+<span id="いいね一覧画面作成" class="fragment"></span><h2>いいね一覧画面作成</h2>
+
+<p>次に、「いいねした投稿を一覧で表示する画面」を作成します。</p>
+
+<p>まず、Userモデルに関連付けを追加していきます。</p>
+
+<p><strong>app/models/user.rb</strong></p>
+
+<pre><code class="ruby hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span> &lt; ApplicationRecord</span>
+  ...
+
+  has_many <span class="hljs-symbol">:favorites</span>
+  has_many <span class="hljs-symbol">:favorite_topics</span>, <span class="hljs-symbol">through:</span> <span class="hljs-symbol">:favorites</span>, <span class="hljs-symbol">source:</span> <span class="hljs-string">'topic'</span>
+<span class="hljs-keyword">end</span>
+
+</code></pre>
+
+<p>今回追加したコードは以下です。</p>
+
+<pre><code class="ruby hljs">has_many <span class="hljs-symbol">:favorite_topics</span>, <span class="hljs-symbol">through:</span> <span class="hljs-symbol">:favorites</span>, <span class="hljs-symbol">source:</span> <span class="hljs-string">'topic'</span>
+</code></pre>
+
+<p>このコードの意味を確認していきましょう。</p>
+
+<p>いいね一覧機能を作る時「ユーザーがいいねした投稿」を取得する必要があります。</p>
+
+<p>その時、<strong>through</strong>を使用することで、以下の図のように、<strong>そのユーザーがいいねしたTopicデータ</strong>をすべて取得することができます。</p>
+
+<p><img src="./tech boost_files/rails-32.png" alt="rails"></p>
+
+<p>つまりUserが紐付いているfavoritesが紐付いているTopicを取得できるというわけです。</p>
+
+<p>次に、Viewを追加します。</p>
+
+<p><strong>app/views/favorites/index.html.erb</strong></p>
+
+<pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"topic-index-wrapper"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">%</span> @<span class="hljs-attr">favorite_topics.each</span> <span class="hljs-attr">do</span> |<span class="hljs-attr">topic</span>| %&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-md-6 col-md-offset-3"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"topic-index-single"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"topic-author"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">topic.user.name</span> %&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">image_tag</span> <span class="hljs-attr">topic.image.url</span> %&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">image_tag</span> '<span class="hljs-attr">icons</span>/<span class="hljs-attr">comment.png</span>', <span class="hljs-attr">class:</span> '<span class="hljs-attr">topic-index-icon</span>' %&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"topic-text"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">topic.description</span> %&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">%</span> <span class="hljs-attr">end</span> %&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+
+<p>これでいいね一覧を表示する機能は完成です。</p>
+
+<span id="いいね済みかどうかによって表示を変える" class="fragment"></span><h2>いいね済みかどうかによって表示を変える</h2>
+
+<p>いいねした場合にハートボタンの表示を消すようにコードを変更していきます。</p>
+
+<p><strong>app/models/topic.rb</strong></p>
+
+<pre><code class="ruby hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Topic</span> &lt; ApplicationRecord</span>
+  ...
+  ...
+  mount_uploader <span class="hljs-symbol">:image</span>, ImageUploader
+
+  has_many <span class="hljs-symbol">:favorites</span>
+  has_many <span class="hljs-symbol">:favorite_users</span>, <span class="hljs-symbol">through:</span> <span class="hljs-symbol">:favorites</span>, <span class="hljs-symbol">source:</span> <span class="hljs-string">'user'</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+
+<p><strong>app/views/topics/index.html.erb</strong></p>
+
+<pre><code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">link_to</span> <span class="hljs-attr">favorites_path</span>(<span class="hljs-attr">topic_id:</span> <span class="hljs-attr">topic.id</span>), <span class="hljs-attr">method:</span> <span class="hljs-attr">:post</span> <span class="hljs-attr">do</span> %&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">image_tag</span> '<span class="hljs-attr">icons</span>/<span class="hljs-attr">heart-black.png</span>', <span class="hljs-attr">class:</span> '<span class="hljs-attr">topic-index-icon</span>' %&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">%</span> <span class="hljs-attr">end</span> %&gt;</span>
+</code></pre>
+
+<p>この部分を、以下のように修正します。</p>
+
+<pre><code class="hljs erb"><span class="xml"></span>&lt;%<span class="ruby"> <span class="hljs-keyword">if</span> !topic.favorite_users.<span class="hljs-keyword">include</span>?(current_user) </span>%&gt;<span class="xml">
+  </span>&lt;%=<span class="ruby"> link_to favorites_path(<span class="hljs-symbol">topic_id:</span> topic.id), <span class="hljs-symbol">method:</span> <span class="hljs-symbol">:post</span> <span class="hljs-keyword">do</span> </span>%&gt;<span class="xml">
+    </span>&lt;%=<span class="ruby"> image_tag <span class="hljs-string">'icons/heart-black.png'</span>, <span class="hljs-class"><span class="hljs-keyword">class</span>: '<span class="hljs-title">topic</span>-<span class="hljs-title">index</span>-<span class="hljs-title">icon</span>' </span></span>%&gt;<span class="xml">
+  </span>&lt;%<span class="ruby"> <span class="hljs-keyword">end</span> </span>%&gt;<span class="xml">
+</span>&lt;%<span class="ruby"> <span class="hljs-keyword">end</span> </span>%&gt;<span class="xml">
+</span></code></pre>
+
+<p>これで、いいねした投稿には、ハートが表示されないようになりました。</p>
+
+<span id="N+1問題" class="fragment"></span><h2>N+1問題</h2>
+
+<p>上のコードで、いいねしたかどうかによって表示を変えられるようになりました。</p>
+
+<p>しかし、このコードには深刻な問題が潜んでいます。</p>
+
+<p>それが「N+1問題」です。</p>
+
+<p>N+1問題とは、本来必要な回数以上にデータベースへの問い合わせをしてしまうことで、処理が重くなる現象をさします（「N+1」回問い合わせるので、このように呼ばれます）。</p>
+
+<p>実際の例で見ていきましょう。</p>
+
+<p>Topicの一覧画面では<strong>@topics.each</strong>でループ処理しています。</p>
+
+<p>その中の<strong>topic.favorite_users</strong>という箇所で、topicのfavorite_usersを取得しています。</p>
+
+<p><strong>app/views/topics/index.html.erb</strong></p>
+
+<pre><code class="html hljs xml">     ...
+     ...
+        <span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">image_tag</span> <span class="hljs-attr">topic.image.url</span> %&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">%</span> <span class="hljs-attr">if</span> !<span class="hljs-attr">topic.favorite_users.include</span>?(<span class="hljs-attr">current_user</span>) %&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">link_to</span> <span class="hljs-attr">favorites_path</span>(<span class="hljs-attr">topic_id:</span> <span class="hljs-attr">topic.id</span>), <span class="hljs-attr">method:</span> <span class="hljs-attr">:post</span> <span class="hljs-attr">do</span> %&gt;</span>
+     ...
+     ...
+</code></pre>
+
+<p>ループで繰り返し処理を行なっているため、Topicの数だけ、topicを毎回ユーザーをデータベースから取得するSQLが走り、その度に検索しています。</p>
+
+<p>この「N+1問題」を防ぐために、includesメソッドを使用します。</p>
+
+<p><strong>app/controllers/topics_controller.rb</strong></p>
+
+<pre><code class="ruby hljs"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">index</span></span>
+  @topics = Topic.all
+<span class="hljs-keyword">end</span>
+</code></pre>
+
+<p>この部分を以下のように修正します。</p>
+
+<pre><code class="ruby hljs"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">index</span></span>
+  @topics = Topic.all.includes(<span class="hljs-symbol">:favorite_users</span>)
+<span class="hljs-keyword">end</span>
+</code></pre>
+
+<p>includesメソッドは、指定したモデルのデータを一括で取得しキャッシュしておくことで「N+1問題」を防ぐことのできるメソッドです。</p>
+
+<p><strong>includes実装前</strong></p>
+
+<pre><code class="hljs sql">Topic <span class="hljs-keyword">Load</span> (<span class="hljs-number">0.4</span>ms)  <span class="hljs-keyword">SELECT</span> <span class="hljs-string">`topics`</span>.* <span class="hljs-keyword">FROM</span> <span class="hljs-string">`topics`</span>
+<span class="hljs-keyword">User</span> <span class="hljs-keyword">Load</span> (<span class="hljs-number">0.7</span>ms)  <span class="hljs-keyword">SELECT</span>  <span class="hljs-string">`users`</span>.* <span class="hljs-keyword">FROM</span> <span class="hljs-string">`users`</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-number">14</span> <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">1</span>
+<span class="hljs-keyword">User</span> <span class="hljs-keyword">Load</span> (<span class="hljs-number">0.5</span>ms)  <span class="hljs-keyword">SELECT</span>  <span class="hljs-string">`users`</span>.* <span class="hljs-keyword">FROM</span> <span class="hljs-string">`users`</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-number">13</span> <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">1</span>
+<span class="hljs-keyword">User</span> <span class="hljs-keyword">Exists</span> (<span class="hljs-number">0.6</span>ms)  <span class="hljs-keyword">SELECT</span>  <span class="hljs-number">1</span> <span class="hljs-keyword">AS</span> one <span class="hljs-keyword">FROM</span> <span class="hljs-string">`users`</span> <span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> <span class="hljs-string">`favorites`</span> <span class="hljs-keyword">ON</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-string">`favorites`</span>.<span class="hljs-string">`user_id`</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-string">`favorites`</span>.<span class="hljs-string">`topic_id`</span> = <span class="hljs-number">3</span> <span class="hljs-keyword">AND</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-number">13</span> <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">1</span>
+<span class="hljs-keyword">User</span> <span class="hljs-keyword">Load</span> (<span class="hljs-number">0.3</span>ms)  <span class="hljs-keyword">SELECT</span>  <span class="hljs-string">`users`</span>.* <span class="hljs-keyword">FROM</span> <span class="hljs-string">`users`</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-number">14</span> <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">1</span>
+<span class="hljs-keyword">User</span> <span class="hljs-keyword">Exists</span> (<span class="hljs-number">0.4</span>ms)  <span class="hljs-keyword">SELECT</span>  <span class="hljs-number">1</span> <span class="hljs-keyword">AS</span> one <span class="hljs-keyword">FROM</span> <span class="hljs-string">`users`</span> <span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> <span class="hljs-string">`favorites`</span> <span class="hljs-keyword">ON</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-string">`favorites`</span>.<span class="hljs-string">`user_id`</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-string">`favorites`</span>.<span class="hljs-string">`topic_id`</span> = <span class="hljs-number">4</span> <span class="hljs-keyword">AND</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-number">13</span> <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">1</span>
+<span class="hljs-keyword">User</span> <span class="hljs-keyword">Load</span> (<span class="hljs-number">0.3</span>ms)  <span class="hljs-keyword">SELECT</span>  <span class="hljs-string">`users`</span>.* <span class="hljs-keyword">FROM</span> <span class="hljs-string">`users`</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-number">13</span> <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">1</span>
+<span class="hljs-keyword">User</span> <span class="hljs-keyword">Exists</span> (<span class="hljs-number">0.4</span>ms)  <span class="hljs-keyword">SELECT</span>  <span class="hljs-number">1</span> <span class="hljs-keyword">AS</span> one <span class="hljs-keyword">FROM</span> <span class="hljs-string">`users`</span> <span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> <span class="hljs-string">`favorites`</span> <span class="hljs-keyword">ON</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-string">`favorites`</span>.<span class="hljs-string">`user_id`</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-string">`favorites`</span>.<span class="hljs-string">`topic_id`</span> = <span class="hljs-number">5</span> <span class="hljs-keyword">AND</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-number">13</span> <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">1</span>
+<span class="hljs-keyword">User</span> <span class="hljs-keyword">Load</span> (<span class="hljs-number">0.3</span>ms)  <span class="hljs-keyword">SELECT</span>  <span class="hljs-string">`users`</span>.* <span class="hljs-keyword">FROM</span> <span class="hljs-string">`users`</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-number">13</span> <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">1</span>
+<span class="hljs-keyword">User</span> <span class="hljs-keyword">Exists</span> (<span class="hljs-number">0.4</span>ms)  <span class="hljs-keyword">SELECT</span>  <span class="hljs-number">1</span> <span class="hljs-keyword">AS</span> one <span class="hljs-keyword">FROM</span> <span class="hljs-string">`users`</span> <span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> <span class="hljs-string">`favorites`</span> <span class="hljs-keyword">ON</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-string">`favorites`</span>.<span class="hljs-string">`user_id`</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-string">`favorites`</span>.<span class="hljs-string">`topic_id`</span> = <span class="hljs-number">6</span> <span class="hljs-keyword">AND</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-number">13</span> <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">1</span>
+<span class="hljs-keyword">User</span> <span class="hljs-keyword">Load</span> (<span class="hljs-number">0.4</span>ms)  <span class="hljs-keyword">SELECT</span>  <span class="hljs-string">`users`</span>.* <span class="hljs-keyword">FROM</span> <span class="hljs-string">`users`</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-number">13</span> <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">1</span>
+<span class="hljs-keyword">User</span> <span class="hljs-keyword">Exists</span> (<span class="hljs-number">0.4</span>ms)  <span class="hljs-keyword">SELECT</span>  <span class="hljs-number">1</span> <span class="hljs-keyword">AS</span> one <span class="hljs-keyword">FROM</span> <span class="hljs-string">`users`</span> <span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> <span class="hljs-string">`favorites`</span> <span class="hljs-keyword">ON</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-string">`favorites`</span>.<span class="hljs-string">`user_id`</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-string">`favorites`</span>.<span class="hljs-string">`topic_id`</span> = <span class="hljs-number">7</span> <span class="hljs-keyword">AND</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-number">13</span> <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">1</span>
+<span class="hljs-keyword">User</span> <span class="hljs-keyword">Load</span> (<span class="hljs-number">0.4</span>ms)  <span class="hljs-keyword">SELECT</span>  <span class="hljs-string">`users`</span>.* <span class="hljs-keyword">FROM</span> <span class="hljs-string">`users`</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-number">13</span> <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">1</span>
+<span class="hljs-keyword">User</span> <span class="hljs-keyword">Exists</span> (<span class="hljs-number">0.4</span>ms)  <span class="hljs-keyword">SELECT</span>  <span class="hljs-number">1</span> <span class="hljs-keyword">AS</span> one <span class="hljs-keyword">FROM</span> <span class="hljs-string">`users`</span> <span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> <span class="hljs-string">`favorites`</span> <span class="hljs-keyword">ON</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-string">`favorites`</span>.<span class="hljs-string">`user_id`</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-string">`favorites`</span>.<span class="hljs-string">`topic_id`</span> = <span class="hljs-number">8</span> <span class="hljs-keyword">AND</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-number">13</span> <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">1</span>
+</code></pre>
+
+<p><strong>includes実装後</strong></p>
+
+<pre><code class="hljs sql">Topic <span class="hljs-keyword">Load</span> (<span class="hljs-number">0.3</span>ms)  <span class="hljs-keyword">SELECT</span> <span class="hljs-string">`topics`</span>.* <span class="hljs-keyword">FROM</span> <span class="hljs-string">`topics`</span>
+Favorite <span class="hljs-keyword">Load</span> (<span class="hljs-number">0.4</span>ms)  <span class="hljs-keyword">SELECT</span> <span class="hljs-string">`favorites`</span>.* <span class="hljs-keyword">FROM</span> <span class="hljs-string">`favorites`</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-string">`favorites`</span>.<span class="hljs-string">`topic_id`</span> <span class="hljs-keyword">IN</span> (<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>)
+<span class="hljs-keyword">User</span> <span class="hljs-keyword">Load</span> (<span class="hljs-number">0.3</span>ms)  <span class="hljs-keyword">SELECT</span> <span class="hljs-string">`users`</span>.* <span class="hljs-keyword">FROM</span> <span class="hljs-string">`users`</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-number">13</span>
+<span class="hljs-keyword">User</span> <span class="hljs-keyword">Load</span> (<span class="hljs-number">0.3</span>ms)  <span class="hljs-keyword">SELECT</span>  <span class="hljs-string">`users`</span>.* <span class="hljs-keyword">FROM</span> <span class="hljs-string">`users`</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-number">14</span> <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">1</span>
+<span class="hljs-keyword">User</span> <span class="hljs-keyword">Load</span> (<span class="hljs-number">0.3</span>ms)  <span class="hljs-keyword">SELECT</span>  <span class="hljs-string">`users`</span>.* <span class="hljs-keyword">FROM</span> <span class="hljs-string">`users`</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-number">13</span> <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">1</span>
+<span class="hljs-keyword">CACHE</span> <span class="hljs-keyword">User</span> <span class="hljs-keyword">Load</span> (<span class="hljs-number">0.0</span>ms)  <span class="hljs-keyword">SELECT</span>  <span class="hljs-string">`users`</span>.* <span class="hljs-keyword">FROM</span> <span class="hljs-string">`users`</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-number">14</span> <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">1</span>  [[<span class="hljs-string">"id"</span>, <span class="hljs-number">14</span>], [<span class="hljs-string">"LIMIT"</span>, <span class="hljs-number">1</span>]]
+<span class="hljs-keyword">CACHE</span> <span class="hljs-keyword">User</span> <span class="hljs-keyword">Load</span> (<span class="hljs-number">0.0</span>ms)  <span class="hljs-keyword">SELECT</span>  <span class="hljs-string">`users`</span>.* <span class="hljs-keyword">FROM</span> <span class="hljs-string">`users`</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-number">13</span> <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">1</span>  [[<span class="hljs-string">"id"</span>, <span class="hljs-number">13</span>], [<span class="hljs-string">"LIMIT"</span>, <span class="hljs-number">1</span>]]
+<span class="hljs-keyword">CACHE</span> <span class="hljs-keyword">User</span> <span class="hljs-keyword">Load</span> (<span class="hljs-number">0.0</span>ms)  <span class="hljs-keyword">SELECT</span>  <span class="hljs-string">`users`</span>.* <span class="hljs-keyword">FROM</span> <span class="hljs-string">`users`</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-number">13</span> <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">1</span>  [[<span class="hljs-string">"id"</span>, <span class="hljs-number">13</span>], [<span class="hljs-string">"LIMIT"</span>, <span class="hljs-number">1</span>]]
+<span class="hljs-keyword">CACHE</span> <span class="hljs-keyword">User</span> <span class="hljs-keyword">Load</span> (<span class="hljs-number">0.0</span>ms)  <span class="hljs-keyword">SELECT</span>  <span class="hljs-string">`users`</span>.* <span class="hljs-keyword">FROM</span> <span class="hljs-string">`users`</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-number">13</span> <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">1</span>  [[<span class="hljs-string">"id"</span>, <span class="hljs-number">13</span>], [<span class="hljs-string">"LIMIT"</span>, <span class="hljs-number">1</span>]]
+<span class="hljs-keyword">CACHE</span> <span class="hljs-keyword">User</span> <span class="hljs-keyword">Load</span> (<span class="hljs-number">0.0</span>ms)  <span class="hljs-keyword">SELECT</span>  <span class="hljs-string">`users`</span>.* <span class="hljs-keyword">FROM</span> <span class="hljs-string">`users`</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-string">`users`</span>.<span class="hljs-string">`id`</span> = <span class="hljs-number">13</span> <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">1</span>  [[<span class="hljs-string">"id"</span>, <span class="hljs-number">13</span>], [<span class="hljs-string">"LIMIT"</span>, <span class="hljs-number">1</span>]]
+</code></pre>
+
+<p>このようにサーバ内で検索結果がキャッシュ(一時的に保持)され、実行速度が早くなっていることがわかります。</p>
+
+<span id="確認テスト" class="fragment"></span><h2>確認テスト</h2>
+
+<ol>
+<li>以下の仕様書にしたがって、コメント機能の実装をしてみましょう。</li>
+</ol>
+
+<pre><code class="hljs">ユーザーは写真にコメントを残すことができる
+何度でもコメントをすることができる
+コメントが空の場合エラーを起こす
+表示は以下の画像のようにする
+</code></pre>
+
+<p><img src="./tech boost_files/rails-34.png" alt="rails"></p>
+
+<span id="課題" class="fragment"></span><h2>課題</h2>
+
+<pre><code class="hljs">※作成したソースコードをGitHubにプッシュした上、
+ 該当リポジトリのURLを課題一覧機能より提出してください。
+</code></pre>
+
+<span id="いいね機能：ハートマークの表示、非表示の代わりに、適用されるCSSが切り替わるようにする（難易度高）" class="fragment"></span><h3>いいね機能：ハートマークの表示、非表示の代わりに、適用されるCSSが切り替わるようにする（難易度高）</h3>
+
+<p>試行錯誤の練習課題です。</p>
+
+<p>現在ハートマークは「いいね」すると画面から消えます。</p>
+
+<p>しかし実際のSNSでは、いいねをするとハートマークが赤くなって「いいね」していることがわかります。</p>
+
+<p>そしてもう一度「いいね」すると、いいねを解除できます。</p>
+
+<p>このように実装するにはどうすればいいでしょうか？</p>
+
+<p>現在は「いいね」しているかどうかを条件分岐で制御し、表示、非表示を切り替えています。</p>
+
+<p>これをCSSの切り替えに修正し、コントローラーで処理する内容を変えます。</p>
+
+<p>方法はいくつかありますので、自身で考えてみてください。</p>
+
+<span id="いいねの合計数をハートマークの横に表示してください" class="fragment"></span><h3>いいねの合計数をハートマークの横に表示してください</h3>
+
+<p>いいね機能は、他のユーザーからもいいねできます。</p>
+
+<p>現在「いいね」されている「合計いいね数」をハートマークの横に数字で表示してください。</p>
+
+<p>デザインは不自然でも問題ありません。</p>
+
+<p><a href="https://tech-boost.jp/students/assignments/new">課題提出はこちらから(クリックすると提出画面に飛びます)</a></p>
+
+<span id="まとめ" class="fragment"></span><h2>まとめ</h2>
+
+<p>これでRailsのカリキュラム(基礎)は終了となります。</p>
+
+<p>次は、Herokuへのデプロイを進めていきましょう！</p>
+
+<p>EXと表記のあるコースにつきましては、時間に余裕のある方は進めてみてください。</p>
+
+<p><a href="https://beta.tech-boost.jp/mentors/courses">コース一覧へ戻る</a></p>
+</div></div></div><hr><div class="content"><p class="text-center">このテキストは理解できましたか？理解したら以下のボタンを押して進捗を登録しましょう。</p><p class="text-center"><a class="btn btn-main" data-confirm="本当に完了してもよろしいですか？" rel="nofollow" data-method="post" href="https://tech-boost.jp/students/books/22/progresses">学習を完了する</a></p></div></div></div><div class="col-md-3"><div class="book-index active" style="left: 1027.5px;"><p class="text-bold text-large">目次</p><a href="https://tech-boost.jp/common/books/22#%E3%81%93%E3%81%AE%E7%AB%A0%E3%81%AE%E3%82%B4%E3%83%BC%E3%83%AB"><li>この章のゴール</li></a><a href="https://tech-boost.jp/common/books/22#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB"><li>はじめに</li></a><a href="https://tech-boost.jp/common/books/22#favorite%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E4%BD%9C%E6%88%90"><li>favoriteモデルの作成</li></a><a href="https://tech-boost.jp/common/books/22#%20%E5%90%8D%E5%89%8D%20%E5%9E%8B"><li> 名前 型</li></a><a href="https://tech-boost.jp/common/books/22#%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%80%81%E3%83%AB%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%AE%E4%BD%9C%E6%88%90"><li>コントローラ、ルーターの作成</li></a><ul><a href="https://tech-boost.jp/common/books/22#%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%AE%E8%BF%BD%E5%8A%A0"><li>リンクの追加</li></a></ul><a href="https://tech-boost.jp/common/books/22#%E3%81%84%E3%81%84%E3%81%AD%E4%B8%80%E8%A6%A7%E7%94%BB%E9%9D%A2%E4%BD%9C%E6%88%90"><li>いいね一覧画面作成</li></a><a href="https://tech-boost.jp/common/books/22#%E3%81%84%E3%81%84%E3%81%AD%E6%B8%88%E3%81%BF%E3%81%8B%E3%81%A9%E3%81%86%E3%81%8B%E3%81%AB%E3%82%88%E3%81%A3%E3%81%A6%E8%A1%A8%E7%A4%BA%E3%82%92%E5%A4%89%E3%81%88%E3%82%8B"><li>いいね済みかどうかによって表示を変える</li></a><a href="https://tech-boost.jp/common/books/22#N+1%E5%95%8F%E9%A1%8C"><li>N+1問題</li></a><a href="https://tech-boost.jp/common/books/22#%E7%A2%BA%E8%AA%8D%E3%83%86%E3%82%B9%E3%83%88"><li>確認テスト</li></a><a href="https://tech-boost.jp/common/books/22#%E8%AA%B2%E9%A1%8C"><li>課題</li></a><ul><a href="https://tech-boost.jp/common/books/22#%E3%81%84%E3%81%84%E3%81%AD%E6%A9%9F%E8%83%BD%EF%BC%9A%E3%83%8F%E3%83%BC%E3%83%88%E3%83%9E%E3%83%BC%E3%82%AF%E3%81%AE%E8%A1%A8%E7%A4%BA%E3%80%81%E9%9D%9E%E8%A1%A8%E7%A4%BA%E3%81%AE%E4%BB%A3%E3%82%8F%E3%82%8A%E3%81%AB%E3%80%81%E9%81%A9%E7%94%A8%E3%81%95%E3%82%8C%E3%82%8BCSS%E3%81%8C%E5%88%87%E3%82%8A%E6%9B%BF%E3%82%8F%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B%EF%BC%88%E9%9B%A3%E6%98%93%E5%BA%A6%E9%AB%98%EF%BC%89"><li>いいね機能：ハートマークの表示、非表示の代わりに、適用されるCSSが切り替わるようにする（難易度高）</li></a></ul><ul><a href="https://tech-boost.jp/common/books/22#%E3%81%84%E3%81%84%E3%81%AD%E3%81%AE%E5%90%88%E8%A8%88%E6%95%B0%E3%82%92%E3%83%8F%E3%83%BC%E3%83%88%E3%83%9E%E3%83%BC%E3%82%AF%E3%81%AE%E6%A8%AA%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84"><li>いいねの合計数をハートマークの横に表示してください</li></a></ul><a href="https://tech-boost.jp/common/books/22#%E3%81%BE%E3%81%A8%E3%82%81"><li>まとめ</li></a></div></div></div><div class="btn-question"><a href="https://tech-boost.jp/students/books/22/questions/new"><img src="./tech boost_files/question-700433a46bfce6124ae378a7612c783655414bcd8868e17a68bb7e6b398d60e4.png" alt="Question"></a></div></div><script src="./tech boost_files/enlargement_image-22b3ac281d1d0d12d0f05171d1990c5d25b350cef608163b58963faf4224dc0a.js"></script><script src="./tech boost_files/create_index-b6b72eec40b6237848cc948c7416c3e3d3dd750f850e0c3e5c640cec98e3b378.js"></script></div></div><footer class="footer"><div class="container"><p class="text-center text-gray text-small">© 2017-2019 Branding Engineer Inc.</p></div></footer><script src="./tech boost_files/study_timer-326daa96bf897a610e527aa586adca2d842ac334977f4cda086382c807195e8f.js"></script><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","359436954244890");fbq("track","PageView");</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;"><script type="text/javascript">var yahoo_ss_retargeting_id=1000410918,yahoo_sstag_custom_params=window.yahoo_sstag_params,yahoo_ss_retargeting=!0;</script>
+<script type="text/javascript" src="./tech boost_files/conversion.js"></script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;"><script type="text/javascript" language="javascript">var yahoo_retargeting_id="VNKD3XR5VC",yahoo_retargeting_label="",yahoo_retargeting_page_type="",yahoo_retargeting_items=[{item_id:"",category_id:"",price:"",quantity:""}];</script>
+<script type="text/javascript" language="javascript" src="./tech boost_files/s_retargeting.js"></script></div><div style="display: none; visibility: hidden;">          <div id="ttdUniversalPixelTagf7f2243b106942f9b17c860c09eb9f90" style="display:none">
+            <script src="./tech boost_files/up_loader.1.1.0.js" type="text/javascript"></script>
+            <script type="text/javascript">(function(a){"function"===typeof TTDUniversalPixelApi&&(a=new TTDUniversalPixelApi,a.init("jbmn273",["ct5nke4"],"https://insight.adsrvr.org/track/up","ttdUniversalPixelTagf7f2243b106942f9b17c860c09eb9f90"))})(this);</script>
+        	</div>
+</div>
+<script type="text/javascript" id="" src="./tech boost_files/oct.js"></script>
+<script type="text/javascript" id="">!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","nz58k");twq("track","PageView");</script>
+
+<script type="text/javascript" id="">(function(b,c,d,a,e){b[a]=b[a]||[];b[a].push({"geeen_tag_manger.start":(new Date).getTime(),event:"js"});b=c.getElementsByTagName(d)[0];c=c.createElement(d);a="GeeeNData"!=a?"\x26l\x3d"+a:"";d=encodeURIComponent(window.location.href);c.async=!0;c.src="https://gntm.geeen.co.jp/Onetag/?id\x3d"+e+"\x26u\x3d"+d+a;b.parentNode.insertBefore(c,b)})(window,document,"script","GeeeNData",1331);</script>
+<script type="text/javascript" id="" src="./tech boost_files/AdMatrixAnalyze.min.js"></script><script type="text/javascript" id="">var input_text=document.getElementsByName("input_text_name")[0];input_text.onfocus=function(){dataLayer.push({event:"input_text_onfocus"})};</script>
+<iframe src="./tech boost_files/pixel.html" style="display: none;"></iframe><iframe id="universal_pixel" allowtransparency="true" height="0" width="0" style="display:none;" src="./tech boost_files/up.html" title="TTD Universal Pixel"></iframe>
+<script type="text/javascript" id="">twttr.conversion.trackPid("nzier",{tw_sale_amount:0,tw_order_quantity:0});</script><script src="./tech boost_files/adsct" type="text/javascript"></script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=nzier&amp;p_id=Twitter&amp;tw_sale_amount=0&amp;tw_order_quantity=0">
+<img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=nzier&amp;p_id=Twitter&amp;tw_sale_amount=0&amp;tw_order_quantity=0">
+</noscript>
+
+<script type="text/javascript" id="">(function(){var b="https:"==document.location.protocol?"https://":"http://",c=Math.round(1E7*Math.random()),d=window.top.location.href,e=window.top.document.referrer,f=AdMatrix.CookieUtil.sharedId(),a=document.createElement("div");a.innerHTML=unescape("%3C")+'img src\x3d"'+b+"acq-3pas.admatrix.jp/if/5/01/94ef326af70023fbf3abf91638b225b5.fs?cb\x3d"+encodeURIComponent(c)+"\x26rf\x3d"+encodeURIComponent(d)+"\x26prf\x3d"+encodeURIComponent(e)+"\x26i\x3d"+encodeURIComponent(f)+'" alt\x3d""  style\x3d"display:block; margin:0; padding:0; border:0; outline:0; width:0; height:0; line-height:0;" '+
+unescape("%2F%3E");document.body.appendChild(a)})();</script><div><img src="./tech boost_files/94ef326af70023fbf3abf91638b225b5.fs" alt="" style="display:block; margin:0; padding:0; border:0; outline:0; width:0; height:0; line-height:0;"></div>
+<noscript><img src="//acq-3pas.admatrix.jp/if/6/01/94ef326af70023fbf3abf91638b225b5.fs" alt="" style="display:block; margin:0; padding:0; border:0; outline:0; width:0; height:0; line-height:0;"></noscript>
+<script type="text/javascript" id="">AdMatrix.analyze("94ef326af70023fbf3abf91638b225b5");</script>
+<script type="text/javascript" id="">AdMatrix.croRequest("94ef326af70023fbf3abf91638b225b5");</script><script src="./tech boost_files/01.fs"></script><script src="./tech boost_files/adsct(1)" type="text/javascript"></script><script src="./tech boost_files/adsct(1)" type="text/javascript"></script><iframe frameborder="0" scrolling="no" style="display: none; width: 1px; height: 1px;" width="1px" height="1px" id="geeen-onetag" src="./tech boost_files/saved_resource.html"></iframe><script type="text/javascript" src="./tech boost_files/bt-usr.js" async=""></script><script type="text/javascript" src="./tech boost_files/jquery.min.js"></script><script type="text/javascript" src="./tech boost_files/btfy-jquery.cookie.js"></script><script type="text/javascript" src="./tech boost_files/btfy-scrolldepth.js"></script><script type="text/javascript" src="./tech boost_files/btfy-utils.js"></script><script type="text/javascript" src="./tech boost_files/btfy-apply.js"></script></body></html>
