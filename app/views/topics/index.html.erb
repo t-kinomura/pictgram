@@ -17,7 +17,7 @@
                 <%= image_tag 'icons/heart-black.png', class: 'topic-index-icon' %>
               <% end %>
             <% end %>
-            <%= Favorite.where(topic_id: topic.id).count %>
+            <%= topic.favorite_users.count %>
             <%= link_to comments_path(topic_id: topic.id) do %>
               <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
             <% end %>
