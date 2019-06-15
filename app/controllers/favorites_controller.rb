@@ -17,7 +17,12 @@ class FavoritesController < ApplicationController
 
   def destroy
     favorite = Favorite.find_by(topic_id: params[:topic_id], user_id: current_user.id)
-    favorite.destroy
-    redirect_to topics_path, success: 'お気に入りから削除しました'
+    favorite.destroy if favorite.present?
+
+    if favorite.destroyed?
+      redirect_to topics_path, success: 'お気に入りから削除しました'
+    else
+      redirect_to topics_path, success: 'お気に入りから削除できませんでした'
+    end
   end
 end
