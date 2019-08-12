@@ -1,5 +1,8 @@
 {
   "name": "pictgram",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "scripts": {
+    "start": "node server.js"
+  }
 }
